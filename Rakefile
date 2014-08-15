@@ -41,6 +41,11 @@ module JB
   end #Path
 end #JB
 
+task :test do
+  sh "bundle exec jekyll build"
+  HTML::Proofer.new("./_site").run
+end # task :test
+
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
