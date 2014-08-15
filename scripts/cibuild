@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec rake install
-bundle exec jekyll install
-#bundle exec htmlproof install
-bundle exec html-proofer install
+bundle # install all gems
 
 bundle exec jekyll build
 bundle exec htmlproof ./_site
