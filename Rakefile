@@ -2,6 +2,7 @@ require "rubygems"
 require 'rake'
 require 'yaml'
 require 'time'
+require 'html/proofer'
 
 SOURCE = "."
 CONFIG = {
